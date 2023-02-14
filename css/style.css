@@ -1,1 +1,88 @@
-/*# sourceMappingURL=style.css.map */
+html {
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+.card__item {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  color: hsl(0deg, 0%, 95%);
+  gap: 2.5rem;
+  max-width: 375px;
+}
+.card__item--orange, .card__item--orange:hover, .card__item--orange:focus {
+  color: hsl(31deg, 77%, 52%);
+  background-color: hsl(31deg, 77%, 52%);
+}
+.card__item--700, .card__item--700:hover, .card__item--700:focus {
+  color: hsl(184deg, 100%, 22%);
+  background-color: hsl(184deg, 100%, 22%);
+}
+.card__item--900, .card__item--900:hover, .card__item--900:focus {
+  color: hsl(179deg, 100%, 13%);
+  background-color: hsl(179deg, 100%, 13%);
+}
+.card__item:nth-child(1) {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.card__item:nth-child(3) {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.card__image {
+  align-self: flex-start;
+}
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 95%);
+  text-transform: uppercase;
+}
+.card__paragraph {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+}
+.card__learn {
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(0deg, 0%, 95%);
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+.card__learn:hover, .card__learn:focus {
+  color: hsl(0deg, 0%, 95%);
+  outline: solid hsl(0deg, 0%, 95%);
+}
+
+@media all and (min-width: 750px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  .card__item:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+  }
+  .card__item:nth-child(3) {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

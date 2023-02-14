@@ -16,3 +16,113 @@ $ff-secondary: 'Lexend Deca', sans-serif;
 
 $fw-p-regular: 400;
 $fw-s-bold: 700;
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin modifiers() {
+  &--orange,
+  &--orange:hover,
+  &--orange:focus {
+    color: $clr-primary-orange;
+    background-color: $clr-primary-orange;
+  }
+  &--700,
+  &--700:hover,
+  &--700:focus {
+    color: $clr-primary-700;
+    background-color: $clr-primary-700;
+  }
+  &--900,
+  &--900:hover,
+  &--900:focus {
+    color: $clr-primary-900;
+    background-color: $clr-primary-900;
+  }
+}
+
+html {
+  font-size: $fs-base;
+}
+
+body {
+  @include flex(column);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  @include flex(column);
+  margin: 1.5rem;
+
+  &__item {
+    @include flex(column);
+    @include modifiers();
+    padding: 3rem;
+    color: $clr-neutral-100;
+    gap: 2.5rem;
+    max-width: 375px;
+  }
+  &__item:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  &__item:nth-child(3) {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  &__image {
+    align-self: flex-start;
+  }
+
+  &__title {
+    font-family: $ff-primary;
+    font-size: 2.5rem;
+
+    color: $clr-neutral-100;
+    text-transform: uppercase;
+  }
+  &__paragraph {
+    color: $clr-neutral-000;
+    font-family: $ff-secondary;
+    line-height: 1.5rem;
+  }
+
+  &__learn {
+    text-decoration: none;
+    font-family: $ff-secondary;
+
+    background-color: $clr-neutral-100;
+    align-self: flex-start;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+  }
+
+  &__learn:hover,
+  &__learn:focus {
+    color: $clr-neutral-100;
+    outline: solid $clr-neutral-100;
+  }
+}
+
+@media all and (min-width: 750px) {
+  .card {
+    @include flex(row);
+    &__item:nth-child(1) {
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+
+      border-top-right-radius: 0;
+    }
+    &__item:nth-child(3) {
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+
+      border-bottom-left-radius: 0;
+    }
+  }
+}
