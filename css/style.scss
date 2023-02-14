@@ -112,6 +112,10 @@ body {
 @media all and (min-width: 750px) {
   .card {
     @include flex(row);
+
+    &__item {
+      max-width: 210px;
+    }
     &__item:nth-child(1) {
       border-top-left-radius: 0.5rem;
       border-bottom-left-radius: 0.5rem;
@@ -123,6 +127,10 @@ body {
       border-bottom-right-radius: 0.5rem;
 
       border-bottom-left-radius: 0;
+    }
+
+    &__learn {
+      margin-top: 3rem;
     }
   }
 }

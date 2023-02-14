@@ -75,6 +75,9 @@ body {
     display: flex;
     flex-direction: row;
   }
+  .card__item {
+    max-width: 210px;
+  }
   .card__item:nth-child(1) {
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -84,5 +87,8 @@ body {
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0;
+  }
+  .card__learn {
+    margin-top: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
